@@ -1,0 +1,36 @@
+/code/users/xlian/codebase/.arcticinfer/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7f208c5640e0>, seed=0, num_prompts=1000, dataset_name='random', no_stream=False, dataset_path=None, no_oversample=False, skip_chat_template=False, disable_shuffle=False, trace_dataset_path='verify/i1k_o128_n4096.jsonl', custom_output_len=256, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, no_reranker=False, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 1}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='openai', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model='Qwen/Qwen3-4B-Instruct-2507', input_len=None, output_len=None, tokenizer=None, tokenizer_mode='auto', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, num_warmups=0, profile=False, save_result=False, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=True, percentile_metrics=None, metric_percentiles='99', goodput=None, request_id_prefix='bench-c1677829-', top_p=None, top_k=None, min_p=None, temperature=None, frequency_penalty=None, presence_penalty=None, repetition_penalty=None, served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=0, extra_body=None, trace_output_path='verify_results/i1k_o128_n4096_run3_f082ea45.json')
+Starting initial single prompt test run...
+Skipping endpoint ready check.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+  0%|          | 0/4096 [00:00<?, ?it/s]  0%|          | 1/4096 [00:02<2:37:30,  2.31s/it]  0%|          | 2/4096 [00:04<2:20:19,  2.06s/it]  4%|▍         | 154/4096 [00:11<04:03, 16.22it/s]  4%|▍         | 183/4096 [00:11<03:12, 20.30it/s]  5%|▌         | 212/4096 [00:11<02:29, 25.91it/s]  7%|▋         | 270/4096 [00:11<01:31, 41.79it/s]  9%|▉         | 374/4096 [00:11<00:46, 80.69it/s] 12%|█▏        | 475/4096 [00:11<00:28, 128.92it/s] 14%|█▍        | 570/4096 [00:11<00:19, 179.32it/s] 15%|█▌        | 634/4096 [00:12<00:16, 214.64it/s] 17%|█▋        | 694/4096 [00:12<00:13, 256.65it/s] 18%|█▊        | 753/4096 [00:12<00:17, 191.32it/s] 19%|█▉        | 798/4096 [00:12<00:15, 218.39it/s] 21%|██        | 853/4096 [00:12<00:12, 259.95it/s] 23%|██▎       | 922/4096 [00:12<00:09, 320.75it/s] 25%|██▍       | 1012/4096 [00:13<00:07, 422.09it/s] 26%|██▋       | 1082/4096 [00:13<00:11, 266.96it/s] 28%|██▊       | 1158/4096 [00:13<00:08, 335.98it/s] 30%|██▉       | 1214/4096 [00:16<00:39, 72.21it/s]  31%|███       | 1265/4096 [00:16<00:31, 90.07it/s] 34%|███▎      | 1382/4096 [00:16<00:17, 151.41it/s] 35%|███▌      | 1451/4096 [00:16<00:13, 191.48it/s] 38%|███▊      | 1552/4096 [00:16<00:09, 269.64it/s] 40%|███▉      | 1622/4096 [00:16<00:07, 318.29it/s] 41%|████▏     | 1691/4096 [00:17<00:07, 313.95it/s] 43%|████▎     | 1748/4096 [00:17<00:09, 250.71it/s] 44%|████▍     | 1795/4096 [00:17<00:08, 279.21it/s] 45%|████▍     | 1840/4096 [00:17<00:07, 305.83it/s] 46%|████▌     | 1891/4096 [00:17<00:06, 341.51it/s] 48%|████▊     | 1978/4096 [00:17<00:04, 447.08it/s] 50%|████▉     | 2042/4096 [00:17<00:04, 480.96it/s] 51%|█████▏    | 2106/4096 [00:18<00:06, 286.40it/s] 54%|█████▎    | 2193/4096 [00:18<00:05, 379.50it/s] 55%|█████▍    | 2251/4096 [00:20<00:22, 82.10it/s]  56%|█████▌    | 2292/4096 [00:20<00:18, 97.80it/s] 59%|█████▉    | 2422/4096 [00:21<00:09, 174.51it/s] 62%|██████▏   | 2533/4096 [00:21<00:06, 249.12it/s] 64%|██████▍   | 2618/4096 [00:21<00:04, 307.42it/s] 66%|██████▌   | 2689/4096 [00:21<00:03, 352.15it/s] 67%|██████▋   | 2757/4096 [00:21<00:03, 374.00it/s] 69%|██████▉   | 2836/4096 [00:21<00:02, 431.20it/s] 71%|███████   | 2901/4096 [00:21<00:02, 461.17it/s] 73%|███████▎  | 3002/4096 [00:21<00:01, 554.10it/s] 76%|███████▌  | 3098/4096 [00:22<00:01, 617.44it/s] 77%|███████▋  | 3170/4096 [00:22<00:02, 405.62it/s] 79%|███████▉  | 3227/4096 [00:24<00:07, 116.05it/s] 80%|████████  | 3284/4096 [00:24<00:05, 141.17it/s] 84%|████████▎ | 3430/4096 [00:24<00:02, 243.75it/s] 88%|████████▊ | 3600/4096 [00:24<00:01, 386.56it/s] 91%|█████████ | 3735/4096 [00:24<00:00, 501.37it/s] 95%|█████████▍| 3876/4096 [00:24<00:00, 636.87it/s]100%|██████████| 4096/4096 [00:24<00:00, 166.21it/s]
+Metrics saved to verify_results/i1k_o128_n4096_run3_f082ea45.json
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     4096      
+Failed requests:                         0         
+Benchmark duration (s):                  24.64     
+Total input tokens:                      4184467   
+Total generated tokens:                  524288    
+Request throughput (req/s):              166.20    
+Output token throughput (tok/s):         21274.20  
+Peak output token throughput (tok/s):    37336.00  
+Peak concurrent requests:                4096.00   
+Total token throughput (tok/s):          191068.67 
+---------------Time to First Token----------------
+Mean TTFT (ms):                          13220.27  
+Median TTFT (ms):                        13046.05  
+P99 TTFT (ms):                           21679.70  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          37.06     
+Median TPOT (ms):                        35.08     
+P99 TPOT (ms):                           60.19     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           37.15     
+Median ITL (ms):                         30.18     
+P99 ITL (ms):                            299.99    
+==================================================

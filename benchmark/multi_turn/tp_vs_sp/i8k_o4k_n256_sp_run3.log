@@ -1,0 +1,36 @@
+/code/users/xlian/codebase/.arcticinfer/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7f9637f540e0>, seed=0, num_prompts=1000, dataset_name='random', no_stream=False, dataset_path=None, no_oversample=False, skip_chat_template=False, disable_shuffle=False, trace_dataset_path='verify/i8k_o4k_n256.jsonl', custom_output_len=256, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, no_reranker=False, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 1}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='openai', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model='Qwen/Qwen3-4B-Instruct-2507', input_len=None, output_len=None, tokenizer=None, tokenizer_mode='auto', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, num_warmups=0, profile=False, save_result=False, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=True, percentile_metrics=None, metric_percentiles='99', goodput=None, request_id_prefix='bench-6cc90729-', top_p=None, top_k=None, min_p=None, temperature=None, frequency_penalty=None, presence_penalty=None, repetition_penalty=None, served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=0, extra_body=None, trace_output_path='verify_results/i8k_o4k_n256_run3_e3f98bf6.json')
+Starting initial single prompt test run...
+Skipping endpoint ready check.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+  0%|          | 0/256 [00:00<?, ?it/s]  0%|          | 1/256 [01:11<5:02:18, 71.13s/it]  1%|          | 2/256 [01:12<2:06:57, 29.99s/it]  2%|▏         | 4/256 [01:12<47:27, 11.30s/it]    3%|▎         | 7/256 [01:12<20:09,  4.86s/it] 13%|█▎        | 33/256 [01:12<02:14,  1.66it/s] 27%|██▋       | 68/256 [01:13<00:42,  4.38it/s] 39%|███▉      | 100/256 [01:13<00:19,  7.88it/s] 52%|█████▏    | 132/256 [01:13<00:09, 12.66it/s]100%|██████████| 256/256 [01:13<00:00,  3.48it/s]
+Metrics saved to verify_results/i8k_o4k_n256_run3_e3f98bf6.json
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     256       
+Failed requests:                         0         
+Benchmark duration (s):                  73.52     
+Total input tokens:                      2096282   
+Total generated tokens:                  1048576   
+Request throughput (req/s):              3.48      
+Output token throughput (tok/s):         14262.19  
+Peak output token throughput (tok/s):    16640.00  
+Peak concurrent requests:                256.00    
+Total token throughput (tok/s):          42774.72  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1124.85   
+Median TTFT (ms):                        1067.26   
+P99 TTFT (ms):                           1515.16   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          17.61     
+Median TPOT (ms):                        17.62     
+P99 TPOT (ms):                           17.64     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           17.63     
+Median ITL (ms):                         17.57     
+P99 ITL (ms):                            20.06     
+==================================================

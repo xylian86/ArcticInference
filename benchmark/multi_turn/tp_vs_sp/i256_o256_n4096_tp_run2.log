@@ -1,0 +1,36 @@
+/code/users/xlian/codebase/.arcticinfer/lib/python3.12/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0x7fd57f4b40e0>, seed=0, num_prompts=1000, dataset_name='random', no_stream=False, dataset_path=None, no_oversample=False, skip_chat_template=False, disable_shuffle=False, trace_dataset_path='verify/i256_o256_n4096.jsonl', custom_output_len=256, spec_bench_output_len=256, spec_bench_category=None, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, blazedit_min_distance=0.0, blazedit_max_distance=1.0, random_input_len=1024, random_output_len=128, random_range_ratio=0.0, random_prefix_len=0, random_batch_size=1, no_reranker=False, random_mm_base_items_per_request=1, random_mm_num_mm_items_range_ratio=0.0, random_mm_limit_mm_per_prompt={'image': 255, 'video': 1}, random_mm_bucket_config={(256, 256, 1): 0.5, (720, 1280, 1): 0.5, (720, 1280, 16): 0.0}, hf_subset=None, hf_split=None, hf_name=None, hf_output_len=None, prefix_repetition_prefix_len=256, prefix_repetition_suffix_len=256, prefix_repetition_num_prefixes=10, prefix_repetition_output_len=128, label=None, backend='openai', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', header=None, max_concurrency=None, model='Qwen/Qwen3-4B-Instruct-2507', input_len=None, output_len=None, tokenizer=None, tokenizer_mode='auto', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=False, disable_tqdm=False, num_warmups=0, profile=False, save_result=False, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=True, percentile_metrics=None, metric_percentiles='99', goodput=None, request_id_prefix='bench-feff90d1-', top_p=None, top_k=None, min_p=None, temperature=None, frequency_penalty=None, presence_penalty=None, repetition_penalty=None, served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None, ready_check_timeout_sec=0, extra_body=None, trace_output_path='verify_results/i256_o256_n4096_run2_e965b422.json')
+Starting initial single prompt test run...
+Skipping endpoint ready check.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+  0%|          | 0/4096 [00:00<?, ?it/s]  0%|          | 1/4096 [00:02<2:39:58,  2.34s/it]  0%|          | 2/4096 [00:03<2:06:32,  1.85s/it]  3%|▎         | 107/4096 [00:14<07:51,  8.47it/s]  3%|▎         | 119/4096 [00:14<06:50,  9.69it/s]  4%|▍         | 170/4096 [00:14<03:43, 17.57it/s]  7%|▋         | 303/4096 [00:14<01:22, 45.96it/s] 11%|█▏        | 463/4096 [00:16<00:57, 63.29it/s] 13%|█▎        | 527/4096 [00:16<00:45, 78.90it/s] 14%|█▍        | 591/4096 [00:16<00:35, 99.27it/s] 15%|█▌        | 632/4096 [00:16<00:30, 113.07it/s] 18%|█▊        | 751/4096 [00:16<00:18, 178.74it/s] 23%|██▎       | 943/4096 [00:16<00:09, 318.17it/s] 25%|██▍       | 1022/4096 [00:17<00:08, 362.40it/s] 27%|██▋       | 1098/4096 [00:17<00:07, 406.17it/s] 29%|██▊       | 1171/4096 [00:24<01:21, 35.79it/s]  30%|███       | 1231/4096 [00:25<01:03, 45.30it/s] 35%|███▍      | 1430/4096 [00:25<00:29, 90.72it/s] 37%|███▋      | 1516/4096 [00:26<00:32, 78.77it/s] 39%|███▊      | 1583/4096 [00:26<00:26, 95.85it/s] 40%|████      | 1642/4096 [00:26<00:21, 114.61it/s] 41%|████▏     | 1696/4096 [00:27<00:17, 137.86it/s] 43%|████▎     | 1775/4096 [00:27<00:12, 181.03it/s] 48%|████▊     | 1967/4096 [00:27<00:06, 335.72it/s] 50%|█████     | 2055/4096 [00:27<00:05, 394.01it/s] 52%|█████▏    | 2141/4096 [00:27<00:04, 418.46it/s] 54%|█████▍    | 2216/4096 [00:33<00:40, 46.97it/s]  57%|█████▋    | 2351/4096 [00:33<00:23, 74.29it/s] 61%|██████▏   | 2511/4096 [00:34<00:16, 94.87it/s] 63%|██████▎   | 2575/4096 [00:34<00:13, 112.05it/s] 64%|██████▍   | 2639/4096 [00:34<00:10, 134.64it/s] 66%|██████▌   | 2693/4096 [00:34<00:08, 156.90it/s] 68%|██████▊   | 2799/4096 [00:35<00:05, 219.45it/s] 73%|███████▎  | 2992/4096 [00:35<00:02, 383.88it/s] 75%|███████▌  | 3091/4096 [00:35<00:02, 446.25it/s] 78%|███████▊  | 3185/4096 [00:39<00:12, 74.38it/s]  79%|███████▉  | 3252/4096 [00:39<00:09, 91.45it/s] 83%|████████▎ | 3382/4096 [00:39<00:05, 139.13it/s] 86%|████████▋ | 3535/4096 [00:40<00:03, 175.14it/s] 89%|████████▊ | 3631/4096 [00:40<00:02, 218.10it/s] 93%|█████████▎| 3791/4096 [00:40<00:00, 322.05it/s]100%|██████████| 4096/4096 [00:40<00:00, 100.94it/s]
+Metrics saved to verify_results/i256_o256_n4096_run2_e965b422.json
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     4096      
+Failed requests:                         0         
+Benchmark duration (s):                  40.58     
+Total input tokens:                      1046372   
+Total generated tokens:                  1048576   
+Request throughput (req/s):              100.94    
+Output token throughput (tok/s):         25839.91  
+Peak output token throughput (tok/s):    41693.00  
+Peak concurrent requests:                4096.00   
+Total token throughput (tok/s):          51625.50  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          19509.76  
+Median TTFT (ms):                        17025.37  
+P99 TTFT (ms):                           35114.91  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          34.14     
+Median TPOT (ms):                        36.84     
+P99 TPOT (ms):                           46.33     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           34.99     
+Median ITL (ms):                         29.60     
+P99 ITL (ms):                            389.71    
+==================================================
