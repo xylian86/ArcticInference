@@ -42,6 +42,16 @@ kill_server() {
     sleep 10
 }
 
+warm_up() {
+    echo "  Warming up: sending a short request to compile CUDA graphs..."
+    curl -s "${BASE_URL}/v1/completions" \
+        -H "Content-Type: application/json" \
+        -d '{"model": "'"${MODEL}"'", "prompt": "warm up", "max_tokens": 1}' \
+        > /dev/null 2>&1
+    echo "  Warm-up complete."
+    sleep 2
+}
+
 run_bench() {
     local label=$1
     local trace=$2
@@ -94,6 +104,7 @@ run_case1_sp8_baseline() {
     echo "  Server PID: $!"
 
     wait_for_server
+    warm_up
     run_bench "${label}" "${TRACES_DIR}/case1_always_sp.jsonl"
     print_iter_stats "${label}"
     kill_server
@@ -116,6 +127,7 @@ run_case1_shift_sp() {
     echo "  Server PID: $!"
 
     wait_for_server
+    warm_up
     run_bench "${label}" "${TRACES_DIR}/case1_always_sp.jsonl"
     print_iter_stats "${label}"
     kill_server
@@ -138,6 +150,7 @@ run_case2_tp8_baseline() {
     echo "  Server PID: $!"
 
     wait_for_server
+    warm_up
     run_bench "${label}" "${TRACES_DIR}/case2_always_tp.jsonl"
     print_iter_stats "${label}"
     kill_server
@@ -160,6 +173,7 @@ run_case2_shift_tp() {
     echo "  Server PID: $!"
 
     wait_for_server
+    warm_up
     run_bench "${label}" "${TRACES_DIR}/case2_always_tp.jsonl"
     print_iter_stats "${label}"
     kill_server
@@ -185,6 +199,7 @@ run_case3_shift() {
     echo "  Server PID: $!"
 
     wait_for_server
+    warm_up
     run_bench "${label}" "${TRACES_DIR}/case3_shifting.jsonl"
     print_iter_stats "${label}"
     kill_server
@@ -205,6 +220,7 @@ run_case3_sp8_baseline() {
     echo "  Server PID: $!"
 
     wait_for_server
+    warm_up
     run_bench "${label}" "${TRACES_DIR}/case3_shifting.jsonl"
     print_iter_stats "${label}"
     kill_server
