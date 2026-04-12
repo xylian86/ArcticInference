@@ -300,3 +300,7 @@ def apply_arctic_patches():
 
     # Main optimization patches.
     apply_shift_parallel_patches()
+
+    # DP session-affinity patches (data_parallel_rank in OpenAI API).
+    from arctic_inference.vllm.dp_routing import apply_dp_routing_patches
+    apply_dp_routing_patches()

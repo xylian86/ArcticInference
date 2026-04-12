@@ -687,7 +687,19 @@ class UlyssesVllmConfig(ArcticPatch[VllmConfig]):
     def pad_for_cudagraph(self, batch_size: int) -> int:
         from .model_runner import is_shift_parallel_mode
         if is_shift_parallel_mode() and self._shift_bs_to_padded_graph_size:
-            return self._shift_bs_to_padded_graph_size[batch_size]
+            table = self._shift_bs_to_padded_graph_size
+            max_size = self._shift_max_cudagraph_capture_size
+            if batch_size > max_size:
+                return max_size
+            try:
+                return table[batch_size]
+            except (KeyError, IndexError):
+                # Table may have gaps after cross-process re-initialization.
+                # Fall back to the smallest capture size >= batch_size.
+                for s in self._shift_cudagraph_capture_sizes:
+                    if s >= batch_size:
+                        return s
+                return max_size
         return self.compilation_config.bs_to_padded_graph_size[batch_size]
 
 
